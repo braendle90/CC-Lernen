@@ -1,33 +1,97 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class wuerfelSpiel {
 
+
+
+
     public static void main(String[] args) {
 
 
-        int computerCube = 0;
-        int userCube = 0;
+        int endSumUser = 0;
+        int endSumComputer = 0;
 
-        boolean isGameStarting = false;
 
-        System.out.println("1.\t Start");
-        System.out.println("2.\t Beenden");
+        boolean runProgram = false;
 
 
         Scanner scanner = new Scanner(System.in);
-        int ScannerInput = scanner.nextInt();
 
-        if (ScannerInput == 1){
 
-            isGameStarting = true;
-            System.out.println("Input Is true");
+
+
+        while (true) {
+
+            System.out.println("1. \t Starten");
+            System.out.println("2.\t Beenden");
+
+
+            int inputScannertoRun = scanner.nextInt();
+
+            switch (inputScannertoRun) {
+
+                case 1:
+                    //System.out.println("Random: "+RandomMethod());
+
+                    for (int i = 0; i < 6; i++) {
+
+
+
+                        endSumUser = endSumUser+ RandomMethod();
+
+                        endSumComputer = endSumComputer+ RandomMethod();
+                        
+                    }
+                    System.out.println(endSumUser);
+                    System.out.println(endSumComputer);
+
+
+                    if (endSumUser > endSumComputer) {
+
+                        System.out.println("Benutzer hat gewonnen.");
+
+                    }
+                    else if (endSumUser < endSumComputer) {
+
+                        System.out.println("Der Computer hat gewonnen");
+
+                    }
+                    else if (endSumUser == endSumComputer){
+
+                        System.out.println("Beide haben unentschieden gespielt");
+                    }
+
+                    endSumUser = 0;
+                    endSumComputer =0;
+
+
+                    break;
+                case 2:
+                    break;
+                default:
+                    System.out.println("idiot");
+
+
+            }
+
 
         }
 
 
 
 
-
-
     }
+
+
+
+    private static int RandomMethod(){
+
+        Random random = new Random();
+
+        int newRandom = random.nextInt(6-0)+1;
+
+        return newRandom;
+    }
+
 }

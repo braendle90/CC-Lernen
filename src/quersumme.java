@@ -24,7 +24,7 @@ public class quersumme {
             //Quersumme berechnen
 
             for (int i = 0; i < s.length(); i++) {
-                System.out.println("Anzahl Zahlen: " + s.length());
+                //System.out.println("Anzahl Zahlen: " + s.length());
                 intArray[i] = Character.getNumericValue(s.charAt(i));
 
                 sum = sum + intArray[i];
@@ -33,8 +33,17 @@ public class quersumme {
 
             System.out.println("Ausgabe Quersumme "+ sum);
 
+            if (sum  == 15) {
 
-            for (int x = 0; x <= 15; x++) {
+                System.out.println("Die Quersumme ist 15 von "+ j);
+
+            }
+
+
+            //Quersume
+
+
+           /* for (int x = 0; x <= 15; x++) {
 
 
                 querSumme = querSumme + sum;
@@ -46,7 +55,7 @@ public class quersumme {
                 }
 
 
-            }
+            }*/
 
 
         }
