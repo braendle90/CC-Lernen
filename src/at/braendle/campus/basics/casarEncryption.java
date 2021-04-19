@@ -34,6 +34,9 @@ public class casarEncryption {
 
             int x = +casarEncryptionClass.getsRandom();
 
+
+
+
             // random Number
 
             //System.out.println("Random: " + x);

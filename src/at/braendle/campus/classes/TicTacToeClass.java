@@ -3,6 +3,7 @@ package at.braendle.campus.classes;
 public class TicTacToeClass {
 
 
+
     public static boolean findSolution(char[][] field, char player) {
 
         if (field[0][0] == player && field[1][1] == player && field[2][2] == player) {
@@ -69,6 +70,7 @@ public class TicTacToeClass {
 
 
     }
+
 
 
 }

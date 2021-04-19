@@ -19,6 +19,8 @@ public class findWordClass {
                 String find = Character.toString(chosenWord.charAt(i));
                 if (find.equalsIgnoreCase(s)) {
 
+
+
                     result = result.substring(0, i) + input + result.substring(i + 1);
 
                 }
